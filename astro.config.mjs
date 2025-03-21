@@ -10,5 +10,10 @@ export default defineConfig({
       langs: ['javascript'],
       wrap: true
     }
-  }
+  },
+  base: '/MarkdownNavigator/',
+  outDir: 'dist',
+  build: {
+    assetsPrefix: "/MarkdownNavigator/_astro/",
+  },
 });
