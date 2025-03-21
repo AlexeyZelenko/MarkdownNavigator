@@ -13,5 +13,9 @@ export default defineConfig({
   },
   site: 'https://alexeyzelenko.github.io/MarkdownNavigator/',
   base: '/MarkdownNavigator/',
-  outDir: 'dist'
+  outDir: 'dist',
+  trailingSlash: 'always',
+  vite: {
+    base: '/MarkdownNavigator/',
+  }
 });
