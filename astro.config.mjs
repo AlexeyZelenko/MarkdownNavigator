@@ -11,9 +11,7 @@ export default defineConfig({
       wrap: true
     }
   },
+  site: 'https://alexeyzelenko.github.io/MarkdownNavigator/',
   base: '/MarkdownNavigator/',
-  outDir: 'dist',
-  build: {
-    assetsPrefix: "/MarkdownNavigator/_astro/",
-  },
+  outDir: 'dist'
 });
