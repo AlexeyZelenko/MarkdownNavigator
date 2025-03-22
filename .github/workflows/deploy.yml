@@ -21,7 +21,7 @@ jobs:
         uses: withastro/action@v3
         with:
           node-version: 20  # Используем Node.js 20
-          package-manager: bun  # Если ты используешь Bun, иначе убери строку
+          args: --base /MarkdownNavigator/
 
   deploy:
     needs: build

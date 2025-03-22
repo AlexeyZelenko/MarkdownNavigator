@@ -13,18 +13,21 @@ export default defineConfig({
     }
   },
   outDir: 'dist',
-  always: '/MarkdownNavigator/',
   base: '/MarkdownNavigator/',
   site: 'https://alexeyzelenko.github.io/MarkdownNavigator/',
   vite: {
     base: '/MarkdownNavigator/',
     define: {
-      'import.meta.env.VITE_BASE_URL': JSON.stringify('https://alexeyzelenko.github.io/MarkdownNavigator/')
+      'import.meta.env.VITE_BASE_URL': JSON.stringify('/MarkdownNavigator/')  // Базовый путь для фронтенда
     },
     resolve: {
       alias: {
         "@styles": "/src/styles",
       },
     },
+  },
+  build: {
+    format: 'directory',  // GitHub Pages работает лучше с папками
+    nojekyll: true,  // 📌 Добавляет `.nojekyll`
   }
 });
