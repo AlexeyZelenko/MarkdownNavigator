@@ -18,7 +18,6 @@ export default defineConfig({
     resolve: {
       alias: {
         "@styles": "/src/styles",
-        "vue": "vue/dist/vue.esm-bundler.js"
       },
     },
   }
