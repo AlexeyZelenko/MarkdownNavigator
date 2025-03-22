@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import tailwind from '@astrojs/tailwind';
+import vue from '@astrojs/vue';
 
 export default defineConfig({
   integrations: [mdx(), tailwind()],
@@ -12,10 +13,13 @@ export default defineConfig({
     }
   },
   site: 'https://alexeyzelenko.github.io/MarkdownNavigator/',
-  base: '/MarkdownNavigator/',
   outDir: 'dist',
-  trailingSlash: 'always',
   vite: {
-    base: '/MarkdownNavigator/',
+    resolve: {
+      alias: {
+        "@styles": "/src/styles",
+        "vue": "vue/dist/vue.esm-bundler.js"
+      },
+    },
   }
 });
