@@ -20,7 +20,7 @@ const conceptsList = Object.entries(concepts).map(([path, concept]) => ({
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {conceptsList.map(concept => (
                     <a
-                            href={`/vue/${concept.path.split('/').pop().replace('.mdx', '')}`}
+                            href={`/MarkdownNavigator/vue/${concept.path.split('/').pop().replace('.mdx', '')}`}
                             class="block p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow"
                     >
                         <h2 class="text-2xl font-semibold mb-2">{concept.frontmatter.title}</h2>
