@@ -12,13 +12,13 @@ export default defineConfig({
       wrap: true
     }
   },
-  site: 'https://alexeyzelenko.github.io/MarkdownNavigator/',
-  outDir: 'dist',
+  site: 'https://alexeyzelenko.github.io',
+  base: '/MarkdownNavigator/',
+  outDir: './dist',
   vite: {
     resolve: {
       alias: {
         "@styles": "/src/styles",
-        "vue": "vue/dist/vue.esm-bundler.js"
       },
     },
   }
