@@ -14,7 +14,7 @@ export default defineConfig({
   },
   site: 'https://alexeyzelenko.github.io',
   base: '/MarkdownNavigator/',
-  outDir: './dist',
+  outDir: 'dist',
   vite: {
     resolve: {
       alias: {
