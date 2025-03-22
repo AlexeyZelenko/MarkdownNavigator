@@ -12,10 +12,15 @@ export default defineConfig({
       wrap: true
     }
   },
-  site: 'https://alexeyzelenko.github.io/MarkdownNavigator/',
   outDir: 'dist',
+  always: '/MarkdownNavigator/',
   base: '/MarkdownNavigator/',
+  site: 'https://alexeyzelenko.github.io/MarkdownNavigator/',
   vite: {
+    base: '/MarkdownNavigator/',
+    define: {
+      'import.meta.env.VITE_BASE_URL': JSON.stringify('https://alexeyzelenko.github.io/MarkdownNavigator/')
+    },
     resolve: {
       alias: {
         "@styles": "/src/styles",
